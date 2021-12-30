@@ -13,9 +13,9 @@
     <projectUrl>https://www.freefilesync.org/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/Zer0one/Chocolatey-packages/master/Icons/freefilesync_icon.png</iconUrl>
     <copyright>Copyright © 2021 Zenju</copyright>
-    <licenseUrl>https://github.com/Zer0one/Chocolatey-packages/blob/master/discontinued/freefilesync/tools/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://github.com/Zer0one/Chocolatey-packages/blob/master/freefilesync/tools/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <projectSourceUrl>https://www.freefilesync.org//download/FreeFileSync_11.15_Source.zip</projectSourceUrl>
+    <projectSourceUrl>https://www.freefilesync.org/download/FreeFileSync_11.15_Source.zip</projectSourceUrl>
     <docsUrl>https://www.freefilesync.org/manual.php</docsUrl>
     <mailingListUrl>https://www.freefilesync.org/forum/</mailingListUrl>
     <tags>freefilesync sync notsilent</tags>
