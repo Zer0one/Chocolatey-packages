@@ -22,7 +22,7 @@ $packageArgs = @{
   fileType     = 'EXE'
   file         = $fileLocation
   softwareName = "$env:ChocolateyPackageName*"
-  # silentArgs   = '/LANG=english' # Donation Edition Only
+  silentArgs   = ''
 }
 
 if (-not (Test-Path -LiteralPath $fileLocation)) {
