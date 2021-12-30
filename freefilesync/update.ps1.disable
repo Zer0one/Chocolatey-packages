@@ -16,7 +16,7 @@ function global:au_GetLatest {
    $version = $URLstub -replace '.*_([0-9.]+)_.*','$1'
 
    $url = "$Release$URLstub"
-   $Source = "$Release/$SourceStub"
+   $Source = "$Release$SourceStub"
 
    return @{ Version = $version; URL32 = $url; Source = $Source}
 }

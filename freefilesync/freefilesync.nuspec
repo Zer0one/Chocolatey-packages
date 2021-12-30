@@ -4,18 +4,18 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>freefilesync</id>
-    <version>10.25</version>
+    <version>11.15</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/freefilesync</packageSourceUrl>
-    <owners>Teknowledgist</owners>
+    <owners>Teknowledgist/Zer0</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>FreeFileSync (final package)</title>
+    <title>FreeFileSync</title>
     <authors>Zenju</authors>
     <projectUrl>https://www.freefilesync.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/freefilesync_icon.png</iconUrl>
-    <copyright>Copyright © 2018 Zenju</copyright>
-    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/discontinued/freefilesync/tools/LICENSE.txt</licenseUrl>
+    <iconUrl>https://cdn.rawgit.com/Zer0one/Chocolatey-packages/master/Icons/freefilesync_icon.png</iconUrl>
+    <copyright>Copyright © 2021 Zenju</copyright>
+    <licenseUrl>https://github.com/Zer0one/Chocolatey-packages/blob/master/discontinued/freefilesync/tools/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <projectSourceUrl>https://www.freefilesync.org//download/FreeFileSync_10.25_Source.zip</projectSourceUrl>
+    <projectSourceUrl>https://www.freefilesync.org//download/FreeFileSync_11.15_Source.zip</projectSourceUrl>
     <docsUrl>https://www.freefilesync.org/manual.php</docsUrl>
     <mailingListUrl>https://www.freefilesync.org/forum/</mailingListUrl>
     <tags>freefilesync sync notsilent</tags>
