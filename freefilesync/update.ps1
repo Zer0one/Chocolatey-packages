@@ -1,5 +1,15 @@
 import-module au
 
+function global:au_SearchReplace {
+    @{
+       "$($Latest.PackageName).nuspec" = @{
+          "^(\s*<projectSourceUrl>).*(<\/projectSourceUrl>)" = "`${1}$($Latest.Source)`$2"
+       }
+    }
+}
+
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+
 function global:au_GetLatest {
    $Release = 'https://www.freefilesync.org'
 
@@ -21,17 +31,4 @@ function global:au_GetLatest {
    return @{ Version = $version; URL32 = $url; Source = $Source}
 }
 
-
-function global:au_SearchReplace {
-   @{
-        "tools\chocolateyInstall.ps1" = @{
-            "(^   url\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
-            "(^   Checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-        }
-      'FreeFileSync.nuspec' = @{
-         "^(\s*<projectSourceUrl>).*(<\/projectSourceUrl>)" = "`${1}$($Latest.Source)`$2"
-      }
-   }
-}
-
-update
+update -ChecksumFor none -NoReadme

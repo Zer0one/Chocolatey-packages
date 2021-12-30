@@ -8,66 +8,66 @@ idText01 = Leggi il seguente contratto di licenza.
 idText02 = Seleziona "Fine" per uscire dall'installazione.
 
 ; License Agreement window
-DetectHiddenText, Off
 SetTitleMatchMode, RegEx
 WinWait, ‌ahk_exe i)\\FreeFileSync_\d+\.\d+_Windows_Setup\.\w{3}$, %idText01%
 WinGet, id, ID, ahk_exe i)\\FreeFileSync_\d+\.\d+_Windows_Setup\.\w{3}$, %idText01%
-; DetectHiddenText, Off
+DetectHiddenText, Off
+
 WinActivate, ahk_id %id%
 Sleep 1000
 
+;;; Accept agreement button
 ;;; The Controls ID change every run. As a workaround contorls coordinate are used -> Coordinate change with zoom level...
 
 ;;; 100% Zoom
 ;; Click first radio buttuon a try
 ; Accept agreement button (Try 1)
-ControlClick, x48 y361, ahk_id %id%,,,, NA
+ControlClick, x48 y361, ahk_id %id%,,,, NA ; ControlClick, > ?$, ahk_id %id%
 ; Next button (Try 1)
-Send {Enter}
+Send {Enter} ;ControlClick, TNewButton4, ahk_id %id%
 sleep, 100
 
 ;; Check if on the same page and try the second radio button
 WinGet, id, ID, ahk_exe i)\\FreeFileSync_\d+\.\d+_Windows_Setup\.\w{3}$, %idText01%
 if (id != "") {
   ; Accept agreement button (Try 2)
-  ControlClick, x48 y381, ahk_id %id%,,,, NA
+  ControlClick, x48 y381, ahk_id %id%,,,, NA ; ControlClick, > ?$, ahk_id %id%
   ; Next button (Try 2)
-  Send {Enter}
+  Send {Enter} ;ControlClick, TNewButton4, ahk_id %id%
   sleep, 100
 }
 
 ;;; 125% Zoom
 ;; Click first radio buttuon a try
 ; Accept agreement button (Try 1)
-ControlClick, x56 y426, ahk_id %id%,,,, NA
+ControlClick, x56 y426, ahk_id %id%,,,, NA ; ControlClick, > ?$, ahk_id %id%
 ; Next button (Try 1)
-Send {Enter}
+Send {Enter} ;ControlClick, TNewButton4, ahk_id %id%
 sleep, 100
 
 ;; Check if on the same page and try the second radio button
 WinGet, id, ID, ahk_exe i)\\FreeFileSync_\d+\.\d+_Windows_Setup\.\w{3}$, %idText01%
 if (id != "") {
   ; Accept agreement button (Try 2)
-  ControlClick, x56 y452, ahk_id %id%,,,, NA
+  ControlClick, x56 y452, ahk_id %id%,,,, NA ; ControlClick, > ?$, ahk_id %id%
   ; Next button (Try 2)
-  Send {Enter}
+  Send {Enter} ;ControlClick, TNewButton4, ahk_id %id%
   sleep, 100
 }
 
 ; Next button in Destination Location window
 Send {Enter}
-sleep, 100
+sleep, 100 ; ControlClick, TNewButton6, ahk_id %id%
 
 ; Next on components page
-Send {Enter}
+Send {Enter} ; ControlClick, TNewButton6, ahk_id %id%
 sleep, 100
 
 ; Next on animal picture page
-Send {Enter}
-sleep, 100
+Send {Enter} ; ControlClick, TNewButton6, ahk_id %id%
+sleep, 1000
 
 __Installing:
-
 ; ;Keep attempting to close window
 ; While( WinExist("ahk_id" . id, "...") )
 ;   sleep, 250
@@ -98,17 +98,17 @@ __Installing:
 ; WinActivate, ahk_id %id%
 ; Sleep 1000
 
-__Ending:
+; __Ending:
 ;Keep attempting to close window
 WinGet, id, ID, ahk_exe i)\\FreeFileSync_\d+\.\d+_Windows_Setup\.\w{3}$, %idText02%
 if (id = "") {
     sleep 500
-    ; goto __Installing
-    goto __Ending
+    goto __Installing
+    ; goto __Ending
 }
 
-; sleep, 250
-Send {Enter}
+sleep, 250
+Send {Enter} ; ControlClick, TNewButton4, ahk_id %id%
 ExitApp
 
 TimeOut:
