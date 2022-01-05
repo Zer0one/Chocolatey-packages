@@ -62,7 +62,7 @@ update_info.xml
 ############
 # Binaries #
 ############
-*.exe
+# *.exe
 *.msp
 *.msi
 *.ffs_db
