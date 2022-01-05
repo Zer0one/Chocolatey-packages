@@ -14,7 +14,7 @@ WinGet, id, ID, ahk_exe i)\\FreeFileSync_\d+\.\d+_Windows_Setup\.\w{3}$, %idText
 DetectHiddenText, Off
 
 WinActivate, ahk_id %id%
-Sleep 1000
+Sleep 2000
 
 ;;; Accept agreement button
 ;;; The Controls ID change every run. As a workaround contorls coordinate are used -> Coordinate change with zoom level...
@@ -22,7 +22,7 @@ Sleep 1000
 ;;; 100% Zoom
 ;; Click first radio buttuon a try
 ; Accept agreement button (Try 1)
-ControlClick, x48 y361, ahk_id %id%,,,, NA ; ControlClick, > ?$, ahk_id %id%
+ControlClick, x48 y362, ahk_id %id%,,,, NA ; ControlClick, > ?$, ahk_id %id%
 ; Next button (Try 1)
 Send {Enter} ;ControlClick, TNewButton4, ahk_id %id%
 sleep, 100
@@ -31,7 +31,7 @@ sleep, 100
 WinGet, id, ID, ahk_exe i)\\FreeFileSync_\d+\.\d+_Windows_Setup\.\w{3}$, %idText01%
 if (id != "") {
   ; Accept agreement button (Try 2)
-  ControlClick, x48 y381, ahk_id %id%,,,, NA ; ControlClick, > ?$, ahk_id %id%
+  ControlClick, x48 y382, ahk_id %id%,,,, NA ; ControlClick, > ?$, ahk_id %id%
   ; Next button (Try 2)
   Send {Enter} ;ControlClick, TNewButton4, ahk_id %id%
   sleep, 100
