@@ -2,7 +2,7 @@ api_key
 *~
 *.bak
 *.cache
-*.nupkg
+# *.nupkg
 *.old
 *.orig
 *.swp
